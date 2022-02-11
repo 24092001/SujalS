@@ -1,0 +1,5 @@
+function onClick(e) {
+    if (stampId.length > 0) {
+        context.drawImage($(stampId).get(0), e.pageX - 90, e.pageY - 60, 80, 80);
+    }
+}
