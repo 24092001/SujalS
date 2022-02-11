@@ -1,0 +1,10 @@
+function onStamp(id) {
+    // Update the stamp image.
+    stampId = '#' + id;
+
+    $(lastStampId).css("border", "0px dashed white");
+    $(stampId).css("border", "1px dashed black");
+
+    // Store stamp so we can un-highlight it next time around.
+    lastStampId = stampId;    
+}
