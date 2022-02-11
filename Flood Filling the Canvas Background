@@ -1,0 +1,8 @@
+function onFill() {
+    // Start a new path to begin drawing in a new color.
+    context.closePath();
+    context.beginPath();
+
+    context.fillStyle = context.strokeStyle;
+    context.fillRect(0, 0, canvas.width, canvas.height);
+}
