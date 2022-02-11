@@ -1,0 +1,28 @@
+// Add this to the top. 
+var enableDraw = false; 
+
+// Modify the init method.
+function init() { 
+    .... 
+
+    // Add these two lines. 
+    canvas.addEventListener('mousedown', function(e) { enableDraw = true; }, false); 
+    canvas.addEventListener('mouseup', function(e) { enableDraw = false; started = false; }, false); 
+
+    .... 
+} 
+
+
+// Then modify onMouseMove():
+if (enableDraw) {
+  if (!started) { 
+    started = true; 
+
+    context.beginPath(); 
+    context.moveTo(x, y); 
+  } 
+  else { 
+    context.lineTo(x, y); 
+    context.stroke(); 
+  }
+}
